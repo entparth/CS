@@ -1,3 +1,4 @@
+import { ApiProvider } from './../../providers/api/api';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -14,12 +15,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'listing.html',
 })
 export class ListingPage {
+  showListings: any = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private api :ApiProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListingPage');
+    this.getAllListings();
   }
 
+  getAllListings(){
+    this.api.getPostByListings().then((data)=>{
+      this.showListings=data;
+      console.log(this.showListings)
+    })
+  }
 }

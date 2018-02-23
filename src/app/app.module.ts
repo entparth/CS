@@ -8,13 +8,16 @@ import { ProfilePage } from '../pages/profile/profile';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { SellPage } from '../pages/sell/sell';
+
 import { TabsPage } from '../pages/tabs/tabs';
 import { ListingPage } from '../pages/listing/listing';
 import { FirstPage } from '../pages/first/first';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { DatabaseProvider } from '../providers/database/database';
+import { ApiProvider } from '../providers/api/api';
+import { Http ,HttpModule} from '@angular/http'
 @NgModule({
   declarations: [
     MyApp,
@@ -30,6 +33,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    // Http,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -46,7 +51,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DatabaseProvider,
+    ApiProvider
   ]
 })
 export class AppModule {}
