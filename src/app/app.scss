@@ -14,3 +14,37 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.buttonshadow{
+	box-shadow: 2px 3px 15px 0px #bdbdbd;
+	// background: linear-gradient(to right, #d7131d, #e18638 170%) !important;
+}
+
+	.toolbar-background {
+		background-color: #FFFFFF;
+	}
+
+
+	@font-face {
+  font-family: 'Oswald-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald-Regular'), local('Titillium-Regular'), url(../assets/fonts/Oswald-Regular.ttf) format('woff2');
+} 
+
+h1,h2,h3,h4,h5{
+  font-family: 'Oswald-Regular' !important;
+  color:rgba(77,77,77,1);
+}
+p{
+	color: rgba(0,0,0,0.5);
+}
+.toolbar-title{
+  font-family: 'Oswald-Regular' !important;
+}
+.icon-ios-primary{
+	font-size: 30px;
+}
+.icon-md-primary{
+	font-size: 30px;
+}

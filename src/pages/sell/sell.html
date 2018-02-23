@@ -1,0 +1,106 @@
+<!--
+  Generated template for the SellPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+  	<button ion-button color="white" (click)="first()">
+      <ion-icon color="primary" name="menu"></ion-icon>
+    </button>
+    <ion-title>Sell Your Cattle</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+	<img src="https://static1.squarespace.com/static/57e1ed83be65949cfa58a9e2/t/583e7f92e6f2e18631f3ec2f/1480490908331/59.jpg"/>
+	<p padding>Cowsales is for producers and agents looking to advertise cattle on farm to a focused audience. We market your livestock here on Cowsales.com.au and through our social media outlets. </p>
+
+	<h2 padding><b>LISTING PACKAGES</b></h2>
+		<ion-card padding>
+			<ion-card-title>
+	<p><b>BASIC - Free</b></p>
+</ion-card-title>
+<p>- Up to 4 photos</p>
+<p>- 14 Day listing on Cowsales.com.au</p>
+<p>- Advertised via our Mailing List</p></ion-card>
+<ion-card padding>
+	<ion-card-title>
+<p><b>PRE SALE MARKETING - $10</b></p>
+</ion-card-title>
+<p>- Designed for agents/producers with upcoming Auctions Plus or Saleyard Sales</p>
+<p>- Your listing shared on our Facebook page the day before sale</p>
+</ion-card>
+<ion-card padding>
+	<ion-card-title>
+<p><b>FEATURED - $60</b></p>
+</ion-card-title>
+<p>- Up to 4 photos</p>
+<p>- Top of page listing on Cowsales.com.au</p>
+<p>- Listed until sold on Cowsales.com.au</p>
+<p>- Listed until sold on social media</p>
+<p>- Paid Facebook Advertising Campaign</p>
+<p>- Personal contact with regular buyers</p>
+</ion-card>
+<h2 padding><b>Sell Your Cattle</b></h2>
+<ion-list padding>
+	<ion-item>
+		<ion-label stacked>Advertising Package</ion-label>
+	<ion-select [(ngModel)]="package">
+      <ion-option value="basic">BASIC - Free</ion-option>
+      <ion-option value="n64">PRE SALE MARKETING - $10</ion-option>
+      <ion-option value="ps">FEATURED - $60</ion-option>
+      <!-- <ion-option value="genesis">MARKETING PACKAGE - $5/head</ion-option> -->
+    </ion-select>
+	</ion-item>
+  <ion-item>
+    <ion-label stacked>Name</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Email Address</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+    <ion-item>
+    <ion-label stacked>Location</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+    <ion-item>
+    <ion-label stacked>Phone</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+      <ion-item>
+    <ion-label stacked>Number of Head</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+      <ion-item>
+    <ion-label stacked>Price</ion-label>
+    <ion-input type="text" placeholder="$ per head"></ion-input>
+  </ion-item>
+
+  <ion-item>
+  	<ion-label stacked>Description</ion-label>
+  	<ion-textarea></ion-textarea>
+  </ion-item>
+    <ion-item>
+  	<button ion-button small round>Image upload</button>
+   </ion-item>
+    <ion-item>
+  	<button ion-button small round>Image upload</button>
+  </ion-item>
+
+
+</ion-list>
+<div padding>
+<button ion-button round medium full class="buttonshadow">SUBMIT
+</button>
+</div>
+
+</ion-content>

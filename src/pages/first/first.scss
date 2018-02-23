@@ -1,0 +1,51 @@
+page-first {
+	.scroll-content{
+	background: #2B2F33;
+	}	
+	img{
+		margin-top: -80px;
+	}
+	.firstheading{
+		// margin-top:-15em;
+		position: relative;
+    text-align: center;
+	}
+	.headfab{
+		 position: relative;
+		 width: 100%;
+		color:white;
+		font-family: 'Oswald-Regular' !important;
+	}
+	ion-col{
+		height:130px;
+	}
+
+
+  .card-title {
+    position: absolute;
+    top: 26%;
+    font-size: 2.5em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Oswald-Regular' !important;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 69%;
+    width: 100%;
+    color: #fff;
+    font-family: 'Oswald-Regular' !important;
+  }
+  .footimage{
+  	max-height: 2.5em;
+  }
+  .footdiv{
+  	padding-top:3em;
+  }
+  ion-footer{
+  	background: #2B2F33;
+  }
+}
