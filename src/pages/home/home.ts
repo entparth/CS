@@ -6,41 +6,35 @@ import { ApiProvider } from '../../providers/api/api';
 
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+	selector: 'page-home',
+	templateUrl: 'home.html'
 })
 export class HomePage {
-  showListings: any = [];
-  
-  constructor(public navCtrl: NavController, private app: App, private api :ApiProvider) {
+	listings: any = [];
 
-  }
-  
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ListingPage');
-    this.getAllListings();
-  }
+	constructor(public navCtrl: NavController, private app: App, private api: ApiProvider) {
 
-  getAllListings(){
-    return new Promise((resolve, reject)=>{
-      this.api.getPostByListings().then((data)=>{
-        this.showListings=data;
-        console.log(this.showListings)
-        resolve(this.showListings);
-      }, err=>{
-        console.log(err)
-        reject(err)
-      })
-    })
+	}
 
-    
-  }
-  listing()
-  {
-  	this.navCtrl.push(ListingPage);
-  }
-  first(){
-  		this.app.getRootNav().setRoot(FirstPage);
-  }
+	ionViewDidLoad() {
+		console.log('ionViewDidLoad ListingPage');
+		this.getAllListings();
+	}
+
+	getAllListings() {
+		this.api.getPostByListings().then((data: any) => {
+			var listings = data.listings;
+			console.log('Listings ', data.listings);
+			this.listings = listings.items;
+		}, (err) => {
+			console.log(err);
+		});
+	}
+	goTolisting(listing) {
+		this.navCtrl.push(ListingPage, {listing: listing});
+	}
+	first() {
+		this.app.getRootNav().setRoot(FirstPage);
+	}
 
 }

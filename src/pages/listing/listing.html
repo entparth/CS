@@ -1,36 +1,21 @@
-<!--
-  Generated template for the ListingPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>26 Heifers</ion-title>
+    <ion-title>{{ listing.title }}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
-	 <img src="assets/imgs/img1.jpeg"/>
+	 <img src="{{ listing.assetUrl }}"/>
 	 <div padding>
-	 	<h3><b>$420.00</b></h3>
-	 	<p>A good quality line of predominantly Santa and Droughtmaster X Heifers. 7-10 months old. Good frame about them. Ideal future breeders. Very quiet and easy to handle. Bred in ticks but are now cleared to go to all areas. Treated with Dectomax Injectable. </p>
-
-		<p>We can organise cheap backloads to most areas and can take care of the NLIS Transfers. Can send more photos and videos.
-		Located at Kingsthorpe 20 mins west of Toowoomba QLD in tick free area.</p>
-
-		<p><b>Contact</b></p>
-		<p>
-		Hayden King<br>
-		Call or text 0458138272<br>
-		E: hmking@mail.com</p>
+	 	<h3><b>${{ listing.variants[0].priceMoney.value }}</b></h3>
+	 	<p [innerHTML]="excerpt"><!-- </p> -->
 
 		<div>-----</div>
 
-		<div style="font-size: 9px">Disclaimer: All prices are excluding GST. Cowsales.com.au and its affiliates bear no responsibility for sales, payments or delivery and exists solely as an advertising platform. It is advised that cattle are inspected prior to payment. </div>
+		<div style="font-size: 9px">{{ disclaimer }}</div>
 	 </div>
 
 </ion-content>

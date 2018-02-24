@@ -1,59 +1,20 @@
 <ion-header>
-  <ion-navbar>
-     <button ion-button color="white" (click)="first()">
-      <ion-icon color="primary" name="menu"></ion-icon>
-    </button>
-    <ion-title>Cattle For Sale</ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<button ion-button color="white" (click)="first()">
+			<ion-icon color="primary" name="menu"></ion-icon>
+		</button>
+		<ion-title>Cattle For Sale</ion-title>
+	</ion-navbar>
 </ion-header>
 
 <ion-content class="card-background-page">
- <ion-card (click)="listing()">
-    <img src="assets/imgs/img1.jpeg"/>
-    <div class="card-title">17 Brahman X Steers</div>
-    <div class="card-subtitle">$590.00</div>
-  </ion-card>
 
-  <ion-card (click)="listing()">
-    <img src="assets/imgs/img2.JPG"/>
-    <div class="card-title">26 Heifers</div>
-    <div class="card-subtitle">$580.00</div>
-  </ion-card>
+	<ion-card *ngFor="let listing of listings" (click)="goTolisting(listing)">
+		<img src="{{ listing.assetUrl }}" />
 
-  <ion-card (click)="listing()">
-    <img src="assets/imgs/img1.jpeg"/>
-    <div class="card-title">17 Brahman X Steers</div>
-    <div class="card-subtitle">$590.00</div>
-  </ion-card>
-
-  <ion-card (click)="listing()">
-    <img src="assets/imgs/img2.JPG"/>
-    <div class="card-title">26 Heifers</div>
-    <div class="card-subtitle">$580.00</div>
-  </ion-card>
-
-  <ion-card (click)="listing()">
-    <img src="assets/imgs/img1.jpeg"/>
-    <div class="card-title">17 Brahman X Steers</div>
-    <div class="card-subtitle">$590.00</div>
-  </ion-card>
-
-  <ion-card (click)="listing()">
-    <img src="assets/imgs/img2.JPG"/>
-    <div class="card-title">26 Heifers</div>
-    <div class="card-subtitle">$580.00</div>
-  </ion-card>
-
-  <ion-card (click)="listing()">
-    <img src="assets/imgs/img1.jpeg"/>
-    <div class="card-title">17 Brahman X Steers</div>
-    <div class="card-subtitle">$590.00</div>
-  </ion-card>
-
-  <ion-card (click)="listing()">
-    <img src="assets/imgs/img2.JPG"/>
-    <div class="card-title">26 Heifers</div>
-    <div class="card-subtitle">$580.00</div>
-  </ion-card>
-  
+		<div class="center-title">
+			<div class="card-title">{{ listing.title }}</div>
+			<div class="card-subtitle">${{ listing.variants[0].priceMoney.value }}</div>
+		</div>
+	</ion-card>
 </ion-content>
