@@ -22,7 +22,7 @@ export class ApiProvider {
 
 
 			// Native Http
-			this.http.get(url).subscribe((data) => {
+			this.http.get('/base' + '/listings/?format=json-pretty').subscribe((data) => {
 				// console.log('Get Post Listing ', data);
 				if (data) {
 					resolve({listings: data});
